@@ -1,0 +1,22 @@
+<h1 style="text-align: center;">Books List</h1>
+<div class="container">
+    @for(book of books;track $index){
+    <div class="field">
+        <div class="name">
+            <div class="form-name">
+                <div class="book-name">{{ book?.name }}</div>
+                <div>-</div>
+                <div>{{ book?.year }}</div>
+            </div>
+        </div>
+
+        <div>{{ book?.author}}</div>
+        <div class="form-star">{{ book?.star}}</div>
+        <button (click)="addToCart(book)">Sepete Ekle</button>
+
+
+    </div>
+
+
+    }
+</div>
